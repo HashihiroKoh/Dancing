@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene
+      embedded
+      arjs="patternRatio:0.80"
+      vr-mode-ui="enabled: false"
+      renderer="logarithmicDepthBuffer: true"
+    >
+      <a-assets>
+        <!--a-asset-item
+          id="crate-obj"
+          src="https://cdn.glitch.global/13096eb5-a3cb-4918-8c7e-93a9132e0f04/IronMan.obj?v=1710840086350"
+        ></a-asset-item>
+        <a-asset-item
+          id="crate-mtl"
+          src="https://cdn.glitch.global/13096eb5-a3cb-4918-8c7e-93a9132e0f04/IronMan.mtl?v=1710840066354"
+        ></a-asset-item-->
+        <a-asset-item
+          id="crate-glb"
+          src="https://cdn.glitch.me/13096eb5-a3cb-4918-8c7e-93a9132e0f04/breakdance.glb?v=1710991325933"
+        ></a-asset-item>
+      </a-assets>
+
+      <!-- マーカーの.pattファイルを読み込む -->
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.global/13096eb5-a3cb-4918-8c7e-93a9132e0f04/ARmarker%20.patt?v=1710836699282"
+      >
+        <!--a-obj-model
+          position="0 0 1.0"
+          scale="0.01 0.01 0.01"
+          rotation="-90 0 0"
+          src="#crate-obj"
+          mtl="#crate-mtl"
+        ></a-obj-model-->
+        <!-- 3Dモデルを呼び出す -->
+        <a-entity
+          gltf-model="#crate-glb"
+          animation-mixer
+          position="0 0 0.65"
+          scale="1.2 1.2 1.2"
+          rotation="-90 0 0"
+        ></a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
