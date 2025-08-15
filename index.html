@@ -17,8 +17,11 @@
           src="https://cdn.glitch.me/13096eb5-a3cb-4918-8c7e-93a9132e0f04/breakdance.glb?v=1710991325933"
         ></a-asset-item>
       </a-assets>
- 
-
+ <!-- マーカーの.pattファイルを読み込む -->
+      <a-marker
+        type="pattern"
+        url="https://github.com/HashihiroKoh/Dancing/blob/main/Marker.patt"
+      >
         <!-- 3Dモデルを呼び出す -->
         <a-entity
           gltf-model="#crate-glb"
@@ -27,17 +30,13 @@
           scale="1.2 1.2 1.2"
           rotation="-90 0 0"
         ></a-entity>
-      
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
 <!--
-      <!-- マーカーの.pattファイルを読み込む 
-      <a-marker
-        type="pattern"
-        src="Marker.patt"
-      >
-</a-marker>
+      
+
 url="https://cdn.glitch.global/13096eb5-a3cb-4918-8c7e-93a9132e0f04/ARmarker%20.patt?v=1710836699282"
 -->
